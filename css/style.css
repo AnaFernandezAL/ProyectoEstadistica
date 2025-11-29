@@ -1,0 +1,27 @@
+main{    
+    margin: 2em;
+}
+
+h1, h2{
+    text-align: center;
+    margin-top: 0.6em;
+    margin-bottom: 1.2em;
+}
+
+hr{
+    border: solid black 2px;    
+    border-color: blue;
+}
+
+.div1{
+    display: flex;    
+    gap: 1em;
+    justify-content: space-between;    
+}
+
+.div2{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    gap: 15em;
+}
