@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="../bootstrap/theme/bootstrap.min.css">
         <!-- Style principal -->
         <link rel="stylesheet" href="../css/style.css">
+        <!-- Style secundario -->
+        <link rel="stylesheet" href="../css/ejercicio2_style.css">
 
     </head>
 
@@ -28,13 +30,13 @@
                     <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="./Ejercicio_1.html">Ejercicio #1                                    
+                                <a class="nav-link" href="./Ejercicio_1.html">Ejercicio #1
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="./Ejercicio_2.html">Ejercicio #2
                                     <span class="visually-hidden">(current)</span>
-                                </a>                                
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -43,13 +45,208 @@
         </header>
 
         <main>
-            <h1>Enunciado ejercicio #2</h1>
-            <h1>Paso 1</h1>
-            <h1>Paso 2</h1>
-            <h1>Paso 3</h1>
-            <h1>Paso 4</h1>
+            <div>
+                <h1>Promedio de cuarto, quinto y sexto año</h1>
+                <table class="table table-hover" style="margin-bottom: 1em;">
+                    <thead>
+                        <tr class="table-success">
+                            <th scope="col"></th>
+                            <th scope="col">Cuarto año</th>
+                            <th scope="col">Quinto año</th>
+                            <th scope="col">Sexto año</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Promedio</th>
+                            <td id="promCuarto">P</td>
+                            <td id="promQuinto">P</td>
+                            <td id="promSexto">P</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br />
+            <hr />
+            <br />
+
+            <div>
+                <h1>Enunciado ejercicio #2</h1>
+                <p>
+                    Realice una prueba de hipótesis con un valor de significancia del 5%, para determinar que el
+                    promedio de
+                    las notas de sexto año es mejor que el del promedio de los tres años, utilizando una desviación
+                    estándar del promedio de los tres años.
+                </p>
+            </div>
+
+            <div>
+                <h2>Paso 1 - Definir las hipótesis</h2>
+                <p>
+                    Para definir las hipótesis, debemos de tomar en cuenta una palabra clave y es: <b>mejor que el
+                        promedio de los tres años (> x&#x0305; 3 años)</b>
+                </p>
+
+                <p>
+                    Por lo que las hipótesis sería:
+                </p>
+
+                <p id="hipoNula">Hipótesis nula: &mu; <= 3 años (89.91 (VARIABLE POR CALCULAR))</p>
+                        <p id="hipoAlte">Hipótesis alterna: &mu; > 3 años (89.91 (VARIABLE POR CALCULAR))</p>
+            </div>
+
+            <div>
+                <h2>Paso 2 - Calcular Z</h2>
+
+                <div>
+                    <p>Luego calculamos nuestra primera Z, con la siguiente fórmula</p>
+
+                    <div class="divImg">
+                        <img src="../uploads/formula_Z.png">
+                    </div>
+
+                    <div class="centrarUL">
+                        <ul>
+                            <li id="mu3Annos">&mu; = 89.91 (VARIABLE POR CALCULAR) Promedio de los tres años</li>
+                            <li id="promSextoAnno">x&#x0305; = 91.28 ((VARIABLE POR CALCULAR) Promedio de sexto año)
+                            </li>
+                            <li id="DesvEstandar3Annos">Desv. Estándar muestra (S) = 6.41 ((VARIABLE POR CALCULAR) S de
+                                los tres
+                                años)</li>
+                            <li id="muestra_n">n = 165</li>
+                        </ul>
+                    </div>
+
+                    <p>Aplicamos la fórmula de acuerdo a nuestros valores, dando como resultado: <b id="totalZ">Z =
+                            var</b>
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Paso 3 - Definir la zona segura y de error con el valor de significancia</h2>
+
+                    <p>Una vez calculado la primera Z, debemos de definir las zona segura y de error en las colas</p>
+
+                    <p>Para definir nuestro gráfico correcto nos basamos en la hipótesis nula (&mu; <b>
+                            <= </b> 3 años)</p>
+
+                    <div class="divImg">
+                        <img src="../uploads/hipoDerecha.png">
+                    </div>
+
+                    <p>Después de haber definido nuestro gráfico, debemos calcular la Z que inicia nuestra zona
+                        de error apartir con el valor de significancia (5%): </p>
+
+                    <div class="centrarUL">
+                        <ul>
+                            <li>1 - Dividimos nuestro valor de significancia entre 100 -> <b
+                                    id="divisionSignif">Pendiente</b>
+                            </li>
+                            <li>2 - Restamos entre 1 y nuestro valor de significancia dividio -> <b
+                                    id="restaSignif">Pendiente</b>
+                            </li>
+                            <li>3 - Buscamos nuestro valor anterior en las tablas de Z -> <b>0.9500 = 1.64</b>
+                            </li>
+                            <li>4 - Siendo 1.64 el punto de inicio de la zona de error</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Paso 4 - Definir nuestra hipótesis final</h2>
+                    <p>Por último, comparamos los valores de nuestra primera Z <b id="totalZ2"></b> con nuestra Z de
+                        zona de error <b>(1.64)</b></p>
+                    <p>Siendo nuestra respuesta: Se rechaza H0, debido a que sobrepasa el 5% establecido o sobrepasa el
+                        1.64
+                    </p>
+                </div>
+
+                <br />
+                <hr />
+
+                <h1>Parte 2</h1>
+                <div>
+                    <p>En este apartado se puede cambiar el promedio de sexto año por los promedios de cuarto y quinto
+                        año, manteniendo las mismas condiciones</p>
+
+                    <div>
+                        <label for="cambioPromedio" class="form-label mt-4">Cambiar promedio</label>
+                        <select class="form-select" id="cambioPromedio">
+                            <option value="vCuarto">Promedio de cuarto</option>
+                            <option value="vQuinto">Promedio de quinto</option>
+                            <option value="vSexto">Promedio de sexto</option>
+                        </select>
+
+                        <div>
+                            <h2>Paso 1 - Definir las hipótesis</h2>
+                            <p>
+                                Hipótesis:
+                            </p>
+
+                            <p id="hipoNulaPart2">Hipótesis nula: PENDIENTE DE ACUERDO A PROMEDIO</p>
+                            <p id="hipoAltePart2">Hipótesis alterna: PENDIENTE DE ACUERDO A PROMEDIO</p>
+                        </div>
+
+                        <div>
+                            <h2>Paso 2 - Calcular Z</h2>
+
+                            <div>
+                                <div class="divImg">
+                                    <img src="../uploads/formula_Z.png">
+                                </div>
+
+                                <div class="centrarUL">
+                                    <ul>
+                                        <li id="mu3AnnosPart2">&mu; = 89.91 (VARIABLE POR CALCULAR) Promedio de los tres
+                                            años
+                                        </li>
+                                        <li id="promSelectAnnoPart2">PENDIENTE DE ACUERDO A PROMEDIO</li>
+                                        <li id="DesvEstandar3AnnosPart2">Desv. Estándar muestra (S) = 6.41 ((VARIABLE
+                                            POR CALCULAR) S de los tres años)</li>
+                                        <li id="muestra_n">n = 165</li>
+                                    </ul>
+                                </div>
+
+                                <p><b id="totalZPart2">Z = var</b></p>
+                            </div>
+
+                            <div>
+                                <h2>Paso 3 - Definir la zona segura y de error con el valor de significancia</h2>
+
+                                <div class="divImg">
+                                    <img src="../uploads/hipoDerecha.png">
+                                </div>
+
+                                <div class="centrarUL">
+                                    <ul>
+                                        <li>1 - Dividimos nuestro valor de significancia entre 100 -> <b
+                                                id="divisionSignifPart2">Pendiente</b>
+                                        </li>
+                                        <li>2 - Restamos entre 1 y nuestro valor de significancia dividio -> <b
+                                                id="restaSignifPart2">Pendiente</b>
+                                        </li>
+                                        <li>3 - Buscamos nuestro valor anterior en las tablas de Z -> <b>0.9500 =
+                                                1.64</b>
+                                        </li>
+                                        <li>4 - Siendo 1.64 el punto de inicio de la zona de error</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2>Paso 4 - Definir nuestra hipótesis final</h2>
+                                <p id="resultadoPaso4">PENDIENTE DE ACUERDO A PROMEDIO</p>
+                            </div>
+                        </div>
+
+                    </div>
         </main>
 
         <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!-- Cargar datos -->
+        <script src="../dataset/estudiantes_finales.js"></script>
+        <!-- Logica JS del Ejercicio 2 -->
+        <script src="../js/ejercicio_2.js"></script>
     </body>
 </htm>
