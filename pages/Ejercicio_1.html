@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../bootstrap/theme/bootstrap.min.css">
         <!-- Style principal -->
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/ejercicio1_style.css">
 
     </head>
 
@@ -42,13 +43,125 @@
         </header>
 
         <main>
-            <h1>Enunciado ejercicio #1</h1>
-            <h1>Paso 1</h1>
-            <h1>Paso 2</h1>
-            <h1>Paso 3</h1>
-            <h1>Paso 4</h1>
+            <div>
+                <h1>Promedio de cuarto, quinto y sexto año</h1>
+                <table class="table table-hover" style="margin-bottom: 1em;">
+                    <thead>
+                        <tr class="table-success">
+                            <th scope="col"></th>
+                            <th scope="col">Cuarto año</th>
+                            <th scope="col">Quinto año</th>
+                            <th scope="col">Sexto año</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Promedio</th>
+                            <td id="promCuarto">P</td>
+                            <td id="promQuinto">P</td>
+                            <td id="promSexto">P</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br />
+            <hr />
+            <br />
+
+            <div>
+                <h1>Enunciado ejercicio #1</h1>
+                <p>
+                    Determine el intervalo de confianza al 98% para las diferencias de los promedios obtenidos en el
+                    nivel de quinto año y de sexto año, utilizar la desviación estándar muestral del promedio de cuarto,
+                    quinto y sexto.
+                </p>
+            </div>
+
+            <div>
+                <h2>Paso 1 - Definir los datos</h2>
+                <div class="centrarUL">
+                    <ul>
+                        <li>n = 165</li>
+                        <li id="promQuintoPart1">PENDIENTE</li>
+                        <li id="promSextoPart1">PENDIENTE</li>
+                        <li id="DesvEstandarGeneralPart1">PENDIENTE</li>
+                        <li>Intervalo de confianza = 98%</li>
+                        <li>Cada cola posee un 1%</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div>
+                <h2>Paso 2 - Definir la fórmula de intervalo de confianza ha utilizar</h2>
+                <div class="divImg">
+                    <img src="../uploads/FormulaIC.png">
+                </div>
+            </div>
+
+
+            <div>
+                <h2>Paso 3 - Diferencia entre las medias</h2>
+                <p>x&#x0305; Quinto año - x&#x0305; Sexto año</p>
+                <p id="diferenciaPromedios"></p>
+            </div>
+
+            <div>
+                <h2>Paso 4 - Calcular error estándar</h2>
+                <div class="divImg">
+                    <img src="../uploads/ErrorEstandar.jpg">
+                </div>
+                <p id="errorEstandar"></p>
+            </div>
+
+            <div>
+                <h2>Paso 5 - Margen de error</h2>
+                <div class="divImg">
+                    <img src="../uploads/MargenError.jpg">
+                </div>
+
+                <p>Para utilizar Z debe de ser calculada, para ello hacemos lo siguiente:</p>
+                <div class="centrarUL">
+                    <ul>
+                        <li>Sumamos el 98% de IC con la cola izquierda -> 98% + 1% = 99%</li>
+                        <li>Luego, dividimos 99% entre 100 = 99 / 100 = 0.9900</li>
+                        <li>Por último, buscamos un número cercano a 0.9900 en la tablas de Z, siendo 2.33</li>
+                    </ul>
+                </div>
+
+                <p>Una vez hecho lo anterior, podemos aplicar la fórmula correctamente</p>
+                <p id="margenError"></p>
+            </div>
+
+            <div>
+                <h2>Paso 4 - Definir nuestro resultado final</h2>
+                <p>Resultado de las diferencias entre las medias +- Margen de Error</p>
+                <p id="resultIzq"></p>
+                <p id="resultDer"></p>
+                <p id="resultadoFinal"></p>
+            </div>
+
+            <hr />
+
+            <h1>Parte 2</h1>
+            <div>
+                <p></p>
+
+                <div>
+                    <label for="cambioPromedio" class="form-label mt-4">Cambiar promedio</label>
+                    <select class="form-select" id="cambioPromedio">
+                        <option value="vCuarto">Promedio de cuarto</option>
+                        <option value="vQuinto">Promedio de quinto</option>
+                        <option value="vSexto">Promedio de sexto</option>
+                    </select>
+                </div>
+            </div>
+
         </main>
 
         <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../dataset/estudiantes_finales.js"></script>
+        <script src="../js/ejercicio_1.js"></script>
     </body>
 </htm>
