@@ -52,6 +52,7 @@
                             <th scope="col">Cuarto año</th>
                             <th scope="col">Quinto año</th>
                             <th scope="col">Sexto año</th>
+                            <th scope="col">General</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,6 +61,7 @@
                             <td id="promCuarto">P</td>
                             <td id="promQuinto">P</td>
                             <td id="promSexto">P</td>
+                            <td id="promGeneral">P</td>
                         </tr>
                     </tbody>
                 </table>
@@ -146,15 +148,95 @@
 
             <h1>Parte 2</h1>
             <div>
-                <p></p>
+                <p>En este apartado puedes cambiar los promedios para compararlos con los otros años, respetando los
+                    mismos pasos</p>
+
+                <div class="flex">
+                    <div>
+                        <label for="cambioPromedio" class="form-label mt-4">Cambiar promedio 1</label>
+                        <select class="form-select" id="cambioPromedio1">
+                            <option value="vCuarto">Promedio de cuarto</option>
+                            <option value="vQuinto">Promedio de quinto</option>
+                            <option value="vSexto">Promedio de sexto</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="cambioPromedio" class="form-label mt-4">Cambiar promedio 2</label>
+                        <select class="form-select" id="cambioPromedio2">
+                            <option value="vCuarto">Promedio de cuarto</option>
+                            <option value="vQuinto">Promedio de quinto</option>
+                            <option value="vSexto">Promedio de sexto</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br>
 
                 <div>
-                    <label for="cambioPromedio" class="form-label mt-4">Cambiar promedio</label>
-                    <select class="form-select" id="cambioPromedio">
-                        <option value="vCuarto">Promedio de cuarto</option>
-                        <option value="vQuinto">Promedio de quinto</option>
-                        <option value="vSexto">Promedio de sexto</option>
-                    </select>
+                    <div>
+                        <h2>Paso 1 - Definir los datos</h2>
+                        <div class="centrarUL">
+                            <ul>
+                                <li>n = 165</li>
+                                <li id="promSelect1">PENDIENTE</li>
+                                <li id="promSelect2">PENDIENTE</li>
+                                <li id="DesvEstandarGeneralPart2">PENDIENTE</li>
+                                <li>Intervalo de confianza = 98%</li>
+                                <li>Cada cola posee un 1%</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h2>Paso 2 - Definir la fórmula de intervalo de confianza ha utilizar</h2>
+                        <div class="divImg">
+                            <img src="../uploads/FormulaIC.png">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h2>Paso 3 - Diferencia entre las medias</h2>
+                        <p>x&#x0305; Promedio 1 - x&#x0305; Promedio 2</p>
+                        <p id="diferenciaPromediosPart2">PENDIENTE</p>
+                    </div>
+
+                    <div>
+                        <h2>Paso 4 - Calcular error estándar</h2>
+                        <div class="divImg">
+                            <img src="../uploads/ErrorEstandar.jpg">
+                        </div>
+                        <p id="errorEstandarPart2">PENDIENTE</p>
+                    </div>
+
+                    <div>
+                        <h2>Paso 5 - Margen de error</h2>
+                        <div class="divImg">
+                            <img src="../uploads/MargenError.jpg">
+                        </div>
+
+                        <p>Para utilizar Z debe de ser calculada, para ello hacemos lo siguiente:</p>
+                        <div class="centrarUL">
+                            <ul>
+                                <li>Sumamos el 98% de IC con la cola izquierda -> 98% + 1% = 99%</li>
+                                <li>Luego, dividimos 99% entre 100 = 99 / 100 = 0.9900</li>
+                                <li>Por último, buscamos un número cercano a 0.9900 en la tablas de Z, siendo 2.33</li>
+                            </ul>
+                        </div>
+
+                        <p>Una vez hecho lo anterior, podemos aplicar la fórmula correctamente</p>
+                        <p id="margenErrorPart2">PENDIENTE</p>
+                    </div>
+
+                    <div>
+                        <h2>Paso 4 - Definir nuestro resultado final</h2>
+                        <p>Resultado de las diferencias entre las medias +- Margen de Error</p>
+                        <p id="resultIzqPart2">PENDIENTE</p>
+                        <p id="resultDerPart2">PENDIENTE</p>
+                        <p id="resultadoFinalPart2">PENDIENTE</p>
+                    </div>
                 </div>
             </div>
 

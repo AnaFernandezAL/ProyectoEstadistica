@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const promCuarto = document.getElementById('promCuarto')
     const promQuinto = document.getElementById('promQuinto')
     const promSexto = document.getElementById('promSexto')
+    const promGeneral = document.getElementById('promGeneral')
 
     promCuarto.textContent = calcularPromedioCuarto(datos_estudiantes)
     promQuinto.textContent = calcularPromedioQuinto(datos_estudiantes)
     promSexto.textContent = calcularPromedioSexto(datos_estudiantes)
+    promGeneral.textContent = calcularPromedioGeneral(datos_estudiantes)
     
     CargarDatos(datos_estudiantes);
     CargarSelectPromDatos(datos_estudiantes);
@@ -177,8 +179,8 @@ function CargarSelectPromDatos(prDatos) {
     restaSignif2Li.textContent = `1 - 0.0500 = ${(1 - (5 / 100)).toFixed(4)}`
 
     /* Carga de datos del paso 4 */
-    var totalZ2HTML = document.getElementById('totalZ2')
-    totalZ2HTML.textContent = `(${total_z})`
+    var totalZ2HTML = document.getElementById('totalZPart2')
+    totalZ2HTML.textContent = `Z = ${total_z}`
 
     /* Respuesta de hipo */
     let respuestaFinal = ""
